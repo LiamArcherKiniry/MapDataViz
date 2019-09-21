@@ -1,0 +1,124 @@
+Company ,Year of Establishment ,EmployeeCountText,Employee Count ,Headquarters ,Lat,Long,API ,FDF 
+Company 1,1998,51-200,200,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 2,1999,"201-1,000 ",1000,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 3,1951,1000+,1100,"Ahmedabad, India ",23.014509,72.591759,1,1
+Company 4,1983,1000+,1100,"Ahmedabad, India ",23.014509,72.591759,1,0
+Company 5,1995,0-50,50,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 6,1997,NA ,NA ,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 7,2005,"201-1,000 ",1000,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 8,1985,51-200 ,200,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 9,1996,1000+ ,1100,"Ahmedabad, India ",23.014509,72.591759,1,1
+Company 10,2011,NA ,NA ,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 11,1993,0-50,50,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 12,1981,0-50,50,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 13,1987,"201-1,000 ",1000,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 14,1971,1000+ ,1100,"Ahmedabad, India ",23.014509,72.591759,1,1
+Company 15,1994,51-200 ,200,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 16,2005,51-200 ,200,"Ahmedabad, India ",23.014509,72.591759,0,1
+Company 17,1953,1000+ ,1100,"Aichi, Japan ",34.36755,135.788727,0,1
+Company 18,1989,"201-1,000 ",1000,"Amman, Jordan ",31.945368,35.928371,0,1
+Company 19,2003,"201-1,000 ",1000,"Anhui, China ",32.026379,117.252747,1,1
+Company 20,1990,1000+ ,1100,"Ardèche, France ",44.815194,4.398652,1,1
+Company 21,1999,NA ,NA ,"Argentina, South America ",-34.55917,-58.536919,1,0
+Company 22,1985,1000+,1100,"Ashikaga, Japan ",36.335209,139.45665,0,1
+Company 23,1949,1000+ ,1100,"Athens, Greece ",37.98381,23.727539,0,1
+Company 24,1974,"201-1,000 ",1000,"Athens, Greece ",37.98381,23.727539,0,1
+Company 25,1967,"201-1,000 ",1000,"Auckland, New Zealand ",-36.848461,174.763336,0,1
+Company 26,1991,51-200,200,"Aurangabad, India ",19.89929,75.319489,1,1
+Company 27,1999,1000+ ,1100,"Bad Homburg, Germany ",50.22715,8.61606,1,1
+Company 28,1986,1000+,1100,"Bad Oldesloe, Germany ",53.809921,10.37285,0,1
+Company 29,2004,51-200 ,200,"Baddi, India ",30.957979,76.79142,0,1
+Company 30,2006,0-50,50,"Baddi, India ",30.957979,76.79142,0,1
+Company 31,1994,0-50,50,"Baddi, India ",30.957979,76.79142,0,1
+Company 32,1981,0-50,50,"Baddi, India ",30.957979,76.79142,0,1
+Company 33,1952,1000+ ,1100,"Baden-Wurttemberg, Germany ",48.629696,9.194953,0,1
+Company 34,2010,0-50,50,"Bangalore, India ",12.971599,77.594566,0,1
+Company 35,1992,"201-1,000 ",1000,"Bangalore, India ",12.971599,77.594566,1,1
+Company 36,1978,1000+,1100,"Bangalore, India ",12.971599,77.594566,1,1
+Company 37,2012,0-50,50,"Bangalore, India ",12.971599,77.594566,0,1
+Company 38,1996,51-200 ,200,"Bangalore, India ",12.971599,77.594566,0,1
+Company 39,1973,1000+ ,1100,"Bangalore, India ",12.971599,77.594566,1,1
+Company 40,1983,"201-1,000 ",1000,"Bangalore, India ",12.971599,77.594566,1,0
+Company 41,1983,51-200 ,200,"Bangalore, India ",12.971599,77.594566,0,1
+Company 42,1992,0-50,50,"Bangalore, India ",12.971599,77.594566,0,1
+Company 43,2015,1000+ ,1100,"Bangalore, India ",12.971599,77.594566,1,1
+Company 44,1989,0-50,50,"Barcelona, Spain ",41.385063,2.173404,1,1
+Company 45,1995,51-200 ,200,"Barcelona, Spain ",41.385063,2.173404,0,1
+Company 46,1987,1000+ ,1100,"Barcelona, Spain ",41.385063,2.173404,0,1
+Company 47,1966,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,1,1
+Company 48,NA ,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,1,0
+Company 49,2000,51-200 ,200,"Barcelona, Spain ",41.385063,2.173404,0,1
+Company 50,1978,0-50,50,"Barcelona, Spain ",41.385063,2.173404,1,0
+Company 51,2005,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,1,1
+Company 52,1955,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,0,1
+Company 53,1972,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,1,1
+Company 54,1970,51-200 ,200,"Barcelona, Spain ",41.385063,2.173404,1,0
+Company 55,1936,"201-1,000 ",1000,"Barcelona, Spain ",41.385063,2.173404,1,0
+Company 56,1997,"201-1,000 ",1000,"Baroda, India ",30.1149,78.61954,1,0
+Company 57,1836,0-50,50,"Basel, Switzerland",47.559608,7.58061,0,1
+Company 58,1897,1000+ ,1100,"Basel, Switzerland ",47.559608,7.58061,1,1
+Company 59,2008,0-50,50,"Bavaria, Germany ",48.917431,11.40798,1,1
+Company 60,1947,"201-1,000 ",1000,"Bavaria, Germany ",48.917431,11.40798,1,1
+Company 61,1886,1000+ ,1100,"Bavaria, Germany ",48.917431,11.40798,1,1
+Company 62,1958,"201-1,000 ",1000,"Beijing, China ",39.904202,116.407394,1,1
+Company 63,NA ,NA ,NA ,"Beijing, China ",39.904202,116.407394,1,0
+Company 64,1987,"201-1,000 ",1000,"Bengaluru, India ",12.971599,77.594566,0,1
+Company 65,1950,"201-1,000 ",1000,"Bergamo, Italy ",45.694889,9.66996,1,1
+Company 66,1954,1000+ ,1100,"Binzen, Germany ",47.63142,7.62486,0,1
+Company 67,1976,"201-1,000 ",1000,"Bolognese, Italy ",44.51263,11.342286,0,1
+Company 68,2006,"201-1,000 ",1000,"Bomem, Belgium ",50.780688,4.792712,0,1
+Company 69,1988,1000+,1100,"Boulogne-Billancourt, France ",48.833832,2.24323,0,1
+Company 70,2001,1000+ ,1100,"Brentford, UK ",51.483372,-0.30859,1,1
+Company 71,1971,"201-1,000 ",1000,"Bubendorf, Switzerland ",47.446684,7.73535,1,0
+Company 72,1996,51-200,200,"Budapest, Hungary ",47.497913,19.040236,1,0
+Company 73,1901,1000+ ,1100,"Budapest, Hungary ",47.497913,19.040236,1,1
+Company 74,1998,"201-1,000 ",1000,"California, US",36.778239,-119.417931,1,1
+Company 75,2005,"201-1,000 ",1000,"California, US ",36.778219,-119.417931,1,0
+Company 76,1988,0-50,50,"California, US ",36.778229,-119.417931,0,1
+Company 77,1979,51-200 ,200,"California, US ",36.778256,-119.417931,0,1
+Company 78,1925,"201-1,000 ",1000,"California, US ",36.778258,-119.417931,1,1
+Company 79,1988,"201-1,000 ",1000,"California, US ",36.778259,-119.417932,1,1
+Company 80,1953,51-200 ,200,"California, US ",36.778259,-119.417934,1,0
+Company 81,1992,51-200 ,200,"California, US ",36.778259,-119.417936,0,1
+Company 82,1988,51-200 ,200,"California, US ",36.778259,-119.417933,0,1
+Company 83,1994,51-200 ,200,"California, US ",36.778259,-119.417937,1,1
+Company 84,1945,"201-1,000 ",1000,"Cameri, Italy ",45.504219,8.66391,1,0
+Company 85,1952,51-200 ,200,"Carnaxide, Portugal ",38.72551,-9.24656,0,1
+Company 86,1988,1000+ ,1100,"Cavite, Philippines ",14.245633,120.878563,0,1
+Company 87,2007,"201-1,000 ",1000,"Chandigarh, India ",30.733315,76.779419,0,1
+Company 88,2005,"201-1,000 ",1000,"Chandigarh, India ",30.733313,76.779419,0,1
+Company 89,1995,"201-1,000 ",1000,"Chandigarh, India ",30.733312,76.779419,1,1
+Company 90,2011,0-50,50,"Chandigarh, India ",30.733311,76.779419,0,1
+Company 91,1995,1000+ ,1100,"Chandigarh, India ",30.733314,76.779419,1,1
+Company 92,1996,1000+ ,1100,"Chandigarh, India ",30.733315,76.779417,1,1
+Company 93,2012,0-50,50,"Chandigarh, India ",30.733315,76.779416,0,1
+Company 94,2011,0-50,50,"Chandigarh, India ",30.733315,76.779414,0,1
+Company 95,1980,0-50,50,"Chandigarh, India ",30.733315,76.779414,0,1
+Company 96,2004,0-50,50,"Chandigarh, India ",30.733315,76.779413,0,1
+Company 97,2010,0-50,50,"Chandigarh, India ",30.733315,76.779412,0,1
+Company 98,1993,51-200 ,200,"Chandigarh, India ",30.733315,76.779411,0,1
+Company 99,1970,"201-1,000 ",1000,"Charlottetown, Canada ",46.238239,-63.131069,1,0
+Company 100,1990,"201-1,000 ",1000,"Chennai, India ",13.08268,80.270721,0,1
+Company 101,NA ,NA ,NA ,"Chennai, India ",13.08266,80.270721,1,1
+Company 102,1979,0-50,50,"Chennai, India ",13.08267,80.270721,0,1
+Company 103,1980,"201-1,000 ",1000,"Chennai, India ",13.08265,80.270721,1,0
+Company 104,1992,1000+ ,1100,"Chennai, India ",13.08264,80.270721,1,1
+Company 105,2003,51-200 ,200,"Chennai, India ",13.08263,80.270721,0,1
+Company 106,NA ,NA ,NA ,"Chifeng, China ",42.271961,118.948036,1,1
+Company 107,2000,0-50,50,"Chifeng, China ",42.271961,118.948036,1,0
+Company 108,2005,1000+ ,1100,"Chongqing, China ",29.431585,106.912254,1,0
+Company 109,1939,NA ,NA ,"Chongqing, China ",29.431585,106.912254,1,1
+Company 110,2004,"201-1,000 ",1000,"Chunan, Taiwan ",24.135019,120.608826,1,1
+Company 111,2017,51-200,200,"Clonmel, Ireland",52.36145,-7.71957,0,1
+Company 112,2015,0-50,50,"Coimbatore, India ",11.01601,76.970306,0,1
+Company 113,2001,"201-1,000 ",1000,"Coimbra, Portugal ",40.203316,-8.410257,1,1
+Company 114,1977,1000+ ,1100,"Colombia, South America ",32.057251,-107.728653,1,1
+Company 115,2007,"201-1,000 ",1000,"Colorado, US ",39.550053,-105.782066,0,1
+Company 116,1969,51-200 ,200,"Concorezzo, Italy ",45.589675,9.335948,1,0
+Company 117,2004,"201-1,000 ",1000,"Connecticut, US ",41.599998,-72.699997,1,1
+Company 118,1903,1000+ ,1100,"Copenhagen, Denmark ",55.6867243,12.5700724,1,1
+Company 119,2012,51-200,200,"Courcelles, Belgium ",50.4574699,4.376008,0,1
+Company 120,1999,0-50,50,"Courroux, Switzerland ",47.359922,7.3782917,0,1
+Company 121,2002,1000+,1100,"Craigavon, Northern Ireland ",54.4507201,-6.3921622,1,1
+Company 122,2003,51-200 ,200,"Daman, India ",20.4169701,72.833173,0,1
+Company 123,1997,0-50,50,"Delaware, US ",38.6920451,-75.4013315,0,1

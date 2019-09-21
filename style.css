@@ -1,0 +1,239 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 0px auto;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+div#map_canvas.right{
+  position: fixed !important;
+}
+
+.left {
+  background-color: #e7e7e7;
+  color: #676767; 
+  height: 100%;
+  position: fixed;
+  width: 400px;
+  float: left;
+  padding: 10px;
+}
+.lefttop {
+  background-color: #d3d3d3;
+  color: #FEFEFE; 
+  height: 100%;
+  position: absolute;
+  width: 400px;
+  float: left;
+  padding: 10px;
+  visibility: hidden;
+   z-index: 10;
+}
+@media only screen and (max-width: 600px) {
+    .left{
+        position: relative;
+        height: 50%;
+        width: 100%;
+         clear: both;
+    }
+    .lefttop{
+        
+        height: 45%;
+        width: 95%;
+         clear: both;
+    }
+    div#map_canvas.right{
+      position: fixed !important;
+        top: 50%;
+        width: 100%;
+         clear: both;
+        margin: 0px;
+   }
+    .right {
+      float: none;
+      width: 100%;
+      position: fixed;
+      height: 100%;
+        clear: both;
+
+    }
+}
+.closebutton {
+     
+     margin-top: 1px;
+     margin-right: 3px;
+     position:absolute;
+	border: none;
+     top:0;
+     right:0;
+	background: #0085ba;
+ 	color: #fff;
+	text-decoration: none;
+	
+ }
+.pb{
+	line-height: 22px;
+    	 width: 12px;
+     	font-size: 22pt;
+    	 font-family: times;
+	vertical-align: center;
+      	text-align: center;
+	display: table-cell; 
+	vertical-align: middle;
+}
+/* The popup bubble styling. */
+.popup {
+        /* Position the bubble centred-above its parent. */
+        background-color: #EF7601;
+	color: #FEFEFE; 
+  	height: 100%;
+  	position: fixed;
+  	width: 400px;
+ 	float: left;
+  	padding: 10px;
+      }
+h2{
+  font-size: 22px;
+  font-weight: 300;
+  border-bottom: 2px solid #FEFEFE;
+  padding-bottom: 5px;
+}
+.intro{
+  font-size: 16px;
+  line-height: 1.5;
+}
+.right {
+  float: left;
+  width: calc(100% - 400px);
+  margin-left: 420px;
+  position: fixed;
+  height: 100%;
+  
+}
+
+
+.clear {
+  clear: both;
+}
+
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.button,
+.button-primary,
+.button-secondary {
+	display: inline-block;
+	text-decoration: none;
+	font-size: ms(-2);
+	line-height: 1;
+	height: ms(4);
+	margin: 0;
+	padding: .2rem .8rem;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-appearance: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Remove the dotted border on :focus and the extra padding in Firefox */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border-width: 0;
+	border-style: none;
+	padding: 0;
+}
+
+.button:active,
+.button:focus {
+	outline: none;
+}
+
+.button.hidden {
+	display: none;
+}
+
+
+/* ----------------------------------------------------------------------------
+  2.0 - Default Button Style
+---------------------------------------------------------------------------- */
+
+.button,
+.button-secondary {
+	color: #555;
+	border-color: #cccccc;
+	background: #f7f7f7;
+	-webkit-box-shadow: 0 1px 0 #cccccc;
+	box-shadow: 0 1px 0 #cccccc;
+ 	vertical-align: top;
+}
+
+p .button {
+	vertical-align: baseline;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 4px;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid lightgrey;
+	background: #FEFEFE;
+	color: #414B55;
+}
+

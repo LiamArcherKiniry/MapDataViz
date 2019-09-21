@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+   
+<title>PCM Map</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <script type="text/javascript">
+        
+        var map = "";				// create a map variable, with Global scope.
+        var markersArray = [];		// create array to hold markers
+        var data;
+	var selectedMarkers =[];
+        
+        function initialize() {
+            
+            
+            // setup some options
+            var mapCenterLatLong = new google.maps.LatLng(30.708668289180398,25.14543041572415);
+
+            var mapOptions = {
+                center: mapCenterLatLong,
+                zoom: 2,
+                mapTypeId: google.maps.MapTypeId.StyledMapType,
+                styles: [
+            
+          ],
+                //mapTypeId: google.maps.MapTypeId.TERRAIN	// other options
+                //mapTypeId: google.maps.MapTypeId.SATELLITE
+                //mapTypeId: google.maps.MapTypeId.HYBRID
+                };
+
+            // create the map, in the DIV defined, using the options set just above.
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            infowindow = new google.maps.InfoWindow({content: "waiting for content..."});
+            // create the markers
+            getData();
+        }
+
+        function setMarkers(markerData) {
+            // define a single marker (a pin point on the map)
+            var myLatLong = new google.maps.LatLng(markerData["Lat"],markerData["Long"]);
+		var empCount =	Math.sqrt(Math.sqrt(markerData["Employee Count "]));
+		var empCount1 = markerData["EmployeeCountText"];
+		var aPI1 = markerData["API "];
+		var fDF1 = markerData["FDF "];
+            var marker = new google.maps.Marker({
+                position: myLatLong,
+                map: map,
+                employeeCount: empCount1,
+		api: aPI1,
+		fdf: fDF1,
+                icon:  {
+                      path: google.maps.SymbolPath.CIRCLE,
+                      scale: empCount,
+                      fillColor:"#FF4C00",
+                      fillOpacity: 0.8,
+                      strokeWeight: 1,
+                      strokeColor: "#333333"
+                    },
+                html: "<button class = 'closebutton' onclick='closeSide();' aria-label='Close Info Modal Box'><p class='pb'>&times;</p></button><h2 style='color:black;'>" + markerData["Company "] + "</h2><p style='color:black;'><strong>Employee Count: </strong>" + markerData["EmployeeCountText"]+"</p><p style='color:black;'><strong>API: </strong>" + markerData["API "]+"</p><p style='color:black;'><strong>FDF: </strong>" + markerData["FDF "]+"</p>",
+                title: markerData["Company "] ,
+            
+  		 
+  		});
+            // add the marker to the array
+            markersArray.push(marker);
+	    selectedMarkers = markersArray.slice(0,125);
+            google.maps.event.addListener(marker, 'click', function () {
+                document.getElementById('pointData').innerHTML = this.html;
+		document.getElementById("pointData").style.visibility="visible"
+            });
+        }
+        
+        function filterHurricane(name) {
+		instanceMarkers = [];
+            for(var i=0; i< markersArray.length; i++) {
+                if (markersArray[i].employeeCount != name){
+                    markersArray[i].setIcon({
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: markersArray[i].icon.scale,
+                        fillColor: markersArray[i].icon.fillColor,
+                        fillOpacity: 0.01,
+                        strokeWeight: 0.01,
+                    })} else {
+                    markersArray[i].setIcon({
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: markersArray[i].icon.scale,
+                        fillColor: markersArray[i].icon.fillColor,
+                        fillOpacity: 0.8,
+                        strokeWeight: 1,
+                        strokeColor: "#333333",
+                    })
+			
+                }
+            
+        }}
+
+
+
+        
+        
+        
+        function hideSVG() {
+          var style = document.getElementById("Damages").style.display;
+          if(style === "none")
+            document.getElementById("Damages").style.display = "block";
+          else
+            document.getElementById("Damages").style.display = "none";
+          //or to hide the all svg
+          //document.getElementById("mySvg").style.display = "none";
+        }
+      
+	function closeSide(){
+		document.getElementById("pointData").style.visibility="hidden"
+	}
+        
+
+        
+        //retrieves the data from the csv and applies it to the object then sets a marker to each object
+        function getData() {
+            d3.csv("newData1.csv", function (d) {
+                data = d;
+                data.forEach(function(d) {
+                    setMarkers(d);
+                });
+            })
+        }
+
+
+	
+    </script>
+                   
+    
+</head>
+
+<body onload="initialize();showAllSize();">
+    
+    
+   
+   
+   
+    <!--Info Panel Side-->
+  <div class= "lefttop" id="pointData"></div>
+  <div class="left">
+    <h2>Pharmaceutical Manufacturing Companies</h2>
+    <p class="intro">An interactive map showing pharmaceutical manufacturing companies. Use the buttons below to filter the points on the map.
+    <div class="ui-state-highlight ui-corner-all" style="padding: 7px;">
+	<strong>Filter by Employee Count:</strong>
+      	<div class="slidecontainer">
+		
+	</div>
+	 <p style="margin-top: 0;"> 
+		<button id="0-50" class="button-secondary" onclick="filterSize('0-50','EmployeeCount');">0-50</button>
+    		<button id="51-200" class="button-secondary" onclick="filterSize('51-200 ','EmployeeCount');">51-200</button>
+   		<button id="201-1,000" class="button-secondary" onclick="filterSize('201-1,000 ','EmployeeCount');">201-1,000</button>
+   		<button id="1,000+" class="button-secondary" onclick="filterSize('1000+ ','EmployeeCount');">1,000+</button>
+   		<button id="All " class="button-secondary" onclick="showAllSize();">All </button>
+    	</p>
+		<!-- <input type="checkbox" id="eCFilter1" value="0-50"> 0-50
+		<input type="checkbox" id="eCFilter2" value="51-200 "> 51-200
+		<input type="checkbox" id="eCFilter3" value="201-1,000 "> 201-1,000
+		<input type="checkbox" id="eCFilter4" value="1000+ "> 1000+
+		<input type="checkbox" id="eCFilter5" value="all"> All
+		<p><button  onclick="filterall();">Submit</button></p>
+		-->
+    </div>
+
+    <div class="clear">&nbsp;</div>
+
+    <div class="ui-state-highlight ui-corner-all" style="padding: 5px;">
+	<strong>Filter by Production Type:</strong>
+       <p style="margin-top: 0;"> 
+		<span class="dot" style="background-color:#00cd00;"></span>
+		<button id="API" class="button-secondary" onclick="filterSize('x','API');">API</button>
+		<span class="dot" style="background-color:#E30613;" ></span>
+    		<button id="FDF" class="button-secondary" onclick="filterSize('x ','FDF');">FDF</button>
+		<span class="dot" style="background-color:#FAB617;"></span>
+		<button id="Both" class="button-secondary" onclick="filterSize('x ','BOTH');">Both</button>
+   		<button id="AllClass" class="button-secondary" onclick="showAllSize();">All </button>
+    	</p>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+
+    <div id="listing">
+      
+    </div>
+
+  </div> 
+    <div id="map_canvas" class="right"></div>
+   
+    
+    
+<script>
+	
+	function filterall(){
+		if(document.getElementById("eCFilter1").checked){
+			filterSize('0-50');
+		}
+		if(document.getElementById("eCFilter2").checked){
+			filterSize('51-200 ');
+		}
+		if(document.getElementById("eCFilter3").checked){
+			filterSize('201-1,000 ');
+		}
+		if(document.getElementById("eCFilter4").checked){
+			filterSize('1000+ ');
+		}
+		if(document.getElementById("eCFilter5").checked){
+			showAllSize();
+		}
+	}
+	
+	function filterSize(sizeDemo,category){
+		var instanceMarkers = [];
+		var blerp = (sizeDemo);
+		
+		
+	   if(category == 'EmployeeCount'){
+		for(var i=0; i<selectedMarkers.length; i++) {
+			if(selectedMarkers[i].employeeCount == blerp){
+				selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: selectedMarkers[i].icon.fillColor,
+					fillOpacity: 0.8,
+					strokeWeight: 0.8,
+					strokeColor: "#333333",
+					
+				})
+				selectedMarkers[i].setVisible(true)
+			 	instanceMarkers.push(selectedMarkers[i]);
+				
+				
+				
+			}else{
+			selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: selectedMarkers[i].icon.fillColor,
+					fillOpacity: 0.01,
+					strokeWeight: 0.01,
+					strokeColor: "#000000",
+					
+				})
+			selectedMarkers[i].setVisible(false)
+			
+			}
+		}
+		selectedMarkers=instanceMarkers.slice(0,125);
+			
+	   }
+		if(category == 'API'){
+		for(var i=0; i<selectedMarkers.length; i++) {
+			if(selectedMarkers[i].api == 1){
+				selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: "#00cd00",
+					fillOpacity: 0.8,
+					strokeWeight: 0.8,
+					strokeColor: "#333333",
+					
+				})
+				selectedMarkers[i].setVisible(true)
+			 	instanceMarkers.push(selectedMarkers[i]);
+				
+				
+			}else{
+			selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: selectedMarkers[i].icon.fillColor,
+					fillOpacity: 0.01,
+					strokeWeight: 0.01,
+					strokeColor: "#000000",
+					
+				})
+				selectedMarkers[i].setVisible(false)
+			}
+		}
+		selectedMarkers=instanceMarkers.slice(0,125);
+			//console.log(selectedMarkers);
+	   }
+	   if(category == 'FDF'){
+		for(var i=0; i<selectedMarkers.length; i++) {
+			if(selectedMarkers[i].fdf == 1){
+				selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: "#E30613",
+					fillOpacity: 0.8,
+					strokeWeight: 0.8,
+					strokeColor: "#333333",
+					
+				})
+				selectedMarkers[i].setVisible(true)
+			 	instanceMarkers.push(selectedMarkers[i]);
+				
+				
+			}else{
+			selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: selectedMarkers[i].icon.fillColor,
+					fillOpacity: 0.01,
+					strokeWeight: 0.01,
+					strokeColor: "#000000",
+					
+				})
+			selectedMarkers[i].setVisible(false)
+			}
+		}
+		selectedMarkers=instanceMarkers.slice(0,125);
+			
+	   }
+	   if(category == 'BOTH'){
+		for(var i=0; i<selectedMarkers.length; i++) {
+			if((selectedMarkers[i].fdf == 1) && (selectedMarkers[i].api == 1)){
+				selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: "#FAB617",
+					fillOpacity: 0.8,
+					strokeWeight: 0.8,
+					strokeColor: "#333333",
+					
+				})
+				selectedMarkers[i].setVisible(true)
+			 	instanceMarkers.push(selectedMarkers[i]);
+				
+				
+			}else{
+			selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: selectedMarkers[i].icon.fillColor,
+					fillOpacity: 0.01,
+					strokeWeight: 0.01,
+					strokeColor: "#000000",
+					
+				})
+			selectedMarkers[i].setVisible(false)
+			}
+		}
+		selectedMarkers=instanceMarkers.slice(0,125);
+			
+	   }
+	}
+	function showAllSize(){
+		selectedMarkers = markersArray.slice(0,125);
+		for(var i=0; i<selectedMarkers.length; i++) {
+			
+				selectedMarkers[i].setIcon({
+					path: google.maps.SymbolPath.CIRCLE,
+					scale: selectedMarkers[i].icon.scale,
+					fillColor: "#FF4C00",
+					fillOpacity: 0.8,
+					strokeWeight: 0.8,
+					strokeColor: "#000000",
+				})
+			selectedMarkers[i].setVisible(true)
+			
+			
+		}
+
+	}
+</script>
+   
+</body>
+    
+</html>
