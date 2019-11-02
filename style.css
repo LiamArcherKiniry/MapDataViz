@@ -30,7 +30,7 @@ div#map_canvas.right{
   visibility: hidden;
    z-index: 10;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     .left{
         position: relative;
         height: 50%;
@@ -42,6 +42,7 @@ div#map_canvas.right{
         height: 45%;
         width: 95%;
          clear: both;
+	    overflow:scroll;
     }
     div#map_canvas.right{
       position: fixed !important;
